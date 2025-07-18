@@ -1,1 +1,21 @@
-{"dns":{"rules":[{"action":"route","domain":["rusrv.fasti.win"],"domain_keyword":[],"domain_regex":[],"domain_suffix":[],"rule_set":[],"server":"dns-direct"}],"servers":[{"address":"tls://8.8.8.8","address_resolver":"dns-local","detour":"proxy","strategy":"","tag":"dns-remote"},{"address":"underlying://0.0.0.0","address_resolver":"dns-local","detour":"direct","strategy":"","tag":"dns-direct"},{"address":"rcode://success","tag":"dns-block"},{"address":"underlying://0.0.0.0","detour":"direct","tag":"dns-local"}]},"endpoints":[],"experimental":{"clash_api":{"default_mode":""}},"inbounds":[{"domain_strategy":"","listen":"127.0.0.1","listen_port":2080,"tag":"mixed-in","type":"mixed"}],"log":{"level":"info"},"outbounds":[{"domain_strategy":"","flow":"xtls-rprx-vision","server":"rusrv.fasti.win","server_port":443,"tag":"proxy","tls":{"enabled":true,"reality":{"enabled":true,"public_key":"ubxGMacjWb9tIAHvREsKygpTJ2NykR7QK1dveI_NTTU","short_id":"9c6ed8b8a9db193d"},"server_name":"rusrv.fasti.win","utls":{"enabled":true,"fingerprint":"chrome"}},"type":"vless","uuid":"7f76e232-9d57-4609-9c7b-c9cd92a58e25"},{"tag":"direct","type":"direct"}],"route":{"final":"proxy","find_process":true,"rule_set":[],"rules":[{"action":"sniff","inbound":["mixed-in","tun-in"]},{"action":"hijack-dns","protocol":"dns"}]}}
+{
+  "type": "vless",
+  "tag": "ROG%20VPN",
+  "server": "helspanel1.hipay.su",
+  "server_port": 443,
+  "uuid": "c6c67044-8c33-4894-a1f8-88c82b52a8c9",
+  "flow": "xtls-rprx-vision",
+  "tls": {
+    "enabled": true,
+    "server_name": "hels1.hipay.su",
+    "utls": {
+      "enabled": true,
+      "fingerprint": "random"
+    },
+    "reality": {
+      "enabled": true,
+      "public_key": "s4bJuj4X42C1h0fisCPWT8y2u1mpEH1SoNEIF938IC4",
+      "short_id": "6972dbb19245ba0a"
+    }
+  }
+}
